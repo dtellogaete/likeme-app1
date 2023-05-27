@@ -1,6 +1,8 @@
-# README - Frontend
+# Likeme
 
-## Instalación
+## Frontend
+
+### Instalación
 
 Para utilizar el frontend de forma correcta, se debe ejecutar el siguiente comando en `likeme\fronend\`:
 
@@ -9,7 +11,7 @@ Para utilizar el frontend de forma correcta, se debe ejecutar el siguiente coman
    npm i --legacy-peer-deps
    ```
 
-## Uso
+### Uso
 
 Una vez instaladas las dependencias, se debe ejecutar el siguiente comando en `likeme\fronend\`:
    ```
@@ -19,7 +21,7 @@ Visualización del frontend en uso:
 
 ![Frontend Like Me](/likeme.png)
 
-# README - Backend
+## Backend
 
 El backend de esta aplicación consta de dos funciones principales:
 
