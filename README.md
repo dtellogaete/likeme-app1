@@ -7,14 +7,14 @@
 Para utilizar el frontend de forma correcta, se debe ejecutar el siguiente comando en `likeme\fronend\`:
 
 1. Ejecutar el siguiente comando para instalar las dependencias necesarias:
-   ```
+   ```javascript
    npm i --legacy-peer-deps
    ```
 
 ### Uso
 
 Una vez instaladas las dependencias, se debe ejecutar el siguiente comando en `likeme\fronend\`:
-   ```
+   ```javascript
    npm run start
    ```
 Visualización del frontend en uso:
@@ -28,7 +28,7 @@ El backend de esta aplicación consta de dos funciones principales:
 1. `getPost()`:
    Esta función se encarga de obtener todas los posts almacenados en la base de datos. Realiza una consulta a la tabla "posts" y devuelve las filas correspondientes. Aquí está el código:
 
-   ```
+   ```javascript
    const getPosts = async () => {
      const response = await pool.query('SELECT * FROM posts');
      return response.rows;
@@ -38,7 +38,7 @@ El backend de esta aplicación consta de dos funciones principales:
 2. `addPosts`:
    Esta función se encarga de agregar una nuevo post a la base de datos. Recibe un objeto `req` que contiene los datos de la publicación, como el título, la imagen (url), la descripción y los likes (de tipo entero). Luego ejecuta una consulta de inserción en la tabla "posts" con los valores proporcionados:
 
-   ```
+   ```javascript
    const addPosts = async (req) => {
      try {
        const query = 'INSERT INTO posts (titulo, img, descripcion, likes) VALUES ($1, $2, $3, $4)';
@@ -81,10 +81,14 @@ Con Express, se implementan las siguientes rutas para interactuar con los posts:
      }
    });
    ```
+* El módulo CORS (Cross-Origin Resource Sharing) se utiliza para permitir solicitudes de recursos (como datos JSON, archivos, etc.) desde un origen de dominio diferente al dominio del servidor en el que se encuentra el código `cors`
+```javascript
+const cors = require('cors');
+```
 
 ## Base de datos
 
-Este backend utiliza una base de datos Postgresql llamada `likeme` y una conexión a través de `pool`. 
+Este backend utiliza una base de datos Postgresql llamada `likeme` y una conexión a través de `pool` usando el package `pg`.
 
 La estructura de la base de datos es la siguiente: 
 
