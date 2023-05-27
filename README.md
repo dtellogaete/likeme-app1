@@ -4,7 +4,7 @@
 
 ### Instalación
 
-Para utilizar el frontend de forma correcta, se debe ejecutar el siguiente comando en `likeme\fronend\`:
+Para utilizar el frontend de forma correcta, se debe ejecutar el siguiente comando en `likeme\frontend\`:
 
 1. Ejecutar el siguiente comando para instalar las dependencias necesarias:
    ```javascript
@@ -13,7 +13,7 @@ Para utilizar el frontend de forma correcta, se debe ejecutar el siguiente coman
 
 ### Uso
 
-Una vez instaladas las dependencias, se debe ejecutar el siguiente comando en `likeme\fronend\`:
+Una vez instaladas las dependencias, se debe ejecutar el siguiente comando en `likeme\frontend\`:
    ```javascript
    npm run start
    ```
